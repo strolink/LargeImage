@@ -24,10 +24,10 @@ import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.annotation.DrawableRes;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.widget.ScrollerCompat;
+import androidx.annotation.DrawableRes;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.ViewCompat;
+import androidx.core.widget.ScrollerCompat;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.view.GestureDetector;
@@ -702,6 +702,8 @@ public class LargeImageView extends View implements BlockImageLoader.OnImageLoad
 
     private GestureDetector.SimpleOnGestureListener simpleOnGestureListener = new GestureDetector.SimpleOnGestureListener() {
 
+        public long scrollTime = 0;
+
         @Override
         public boolean onDown(MotionEvent e) {
             if (!mScroller.isFinished()) {
@@ -720,7 +722,7 @@ public class LargeImageView extends View implements BlockImageLoader.OnImageLoad
             if (!isEnabled()) {
                 return false;
             }
-            if (onClickListener != null && isClickable()) {
+            if ((System.currentTimeMillis() - scrollTime) > 500 && onClickListener != null && isClickable()) {
                 onClickListener.onClick(LargeImageView.this);
             }
             return true;
@@ -732,6 +734,7 @@ public class LargeImageView extends View implements BlockImageLoader.OnImageLoad
                 return false;
             }
             overScrollByCompat((int) distanceX, (int) distanceY, getScrollX(), getScrollY(), getScrollRangeX(), getScrollRangeY(), 0, 0, false);
+            scrollTime = System.currentTimeMillis();
             return true;
         }
 
@@ -750,6 +753,7 @@ public class LargeImageView extends View implements BlockImageLoader.OnImageLoad
             if (!isEnabled()) {
                 return false;
             }
+            scrollTime = System.currentTimeMillis();
             fling((int) -velocityX, (int) -velocityY);
             return true;
         }
