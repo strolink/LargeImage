@@ -4,7 +4,7 @@ Android 加载大图  可以高清显示10000*10000像素的图片
 普通图片也可以用它展示
 #Gradle
 
- 	 implementation 'com.github.strolink:LargeImage1.1.2'
+ 	 implementation 'com.github.strolink:LargeImage1.1.1'
 
 Download Demo [apk](raw/LargeImage.apk)
 
