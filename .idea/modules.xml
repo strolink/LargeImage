@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/LargeImage.iml" filepath="$PROJECT_DIR$/LargeImage.iml" group="LargeImage" />
+      <module fileurl="file://$PROJECT_DIR$/app/LargeImage-app.iml" filepath="$PROJECT_DIR$/app/LargeImage-app.iml" group="LargeImage/app" />
+      <module fileurl="file://$PROJECT_DIR$/library/LargeImage-library.iml" filepath="$PROJECT_DIR$/library/LargeImage-library.iml" group="LargeImage/library" />
       <module fileurl="file://$PROJECT_DIR$/LargeImage7.iml" filepath="$PROJECT_DIR$/LargeImage7.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
