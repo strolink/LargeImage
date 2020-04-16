@@ -2,7 +2,6 @@
 /local.properties
 /.idea/
 /app/release
-/gradle.properties
 /gradlew
 /gradlew.bat
 gradle/
