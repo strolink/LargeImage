@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'//添加jcenter插件
+//apply plugin: 'com.novoda.bintray-release'//添加jcenter插件
 //apply from:'../z_publish.gradle'
 
 android {
@@ -9,8 +9,8 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 29
-        versionCode 11
-        versionName "1.1.0"
+        versionCode 15
+        versionName "1.1.4"
     }
     buildTypes {
         release {
@@ -28,7 +28,7 @@ dependencies {
     compileOnly 'androidx.legacy:legacy-support-v4:1.0.0'
 }
 
-//添加
+/*//添加
 publish {
     userOrg = 'luckyjayce'//bintray.com用户名
     groupId = 'com.shizhefei'//jcenter上的路径
@@ -36,4 +36,4 @@ publish {
     publishVersion = '1.1.0'//版本号
     desc = 'display large image,can scale and move image'//描述，不重要
     website = 'https://github.com/LuckyJayce/LargeImageView'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
-}
+}*/
